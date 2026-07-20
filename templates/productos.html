@@ -1,0 +1,38 @@
+﻿{% extends 'base.html' %}
+
+{% block content %}
+<div class="text-center mb-5 fade-in">
+    <h1 class="section-title display-6 fw-bold">Catálogo de Productos</h1>
+    <p class="text-muted">Explora los productos activos con categorías, precio y stock disponible.</p>
+</div>
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    {% for p in productos %}
+    <div class="col">
+        <div class="card card-custom h-100 p-4 fade-in">
+            <div class="d-flex justify-content-between align-items-start mb-3">
+                <span class="badge-categoria">{{ p.categoria }}</span>
+                <span class="badge-precio">$ {{ '%.2f' | format(p.precio_venta) }}</span>
+            </div>
+            <h5 class="fw-bold">{{ p.nombre }}</h5>
+            <p class="text-muted mb-2">SKU: {{ p.sku }}</p>
+            <div class="mb-3">
+                <span class="badge bg-success text-white me-2">Producto Certificado</span>
+                <span class="badge bg-primary text-white">Garantía Incluida</span>
+            </div>
+            <p class="mb-4"><strong>Stock total:</strong> {{ p.stock_total }}</p>
+            <a href="{{ url_for('productos') }}" class="btn btn-primary-custom">Ver más</a>
+        </div>
+    </div>
+    {% else %}
+    <div class="col-12">
+        <div class="alert alert-info">No se encontraron productos disponibles en este momento.</div>
+    </div>
+    {% endfor %}
+</div>
+
+<div class="mt-4 text-muted small">
+    <p>Todos nuestros productos cuentan con garantía del fabricante y factura fiscal.</p>
+    <p>Precios sujetos a cambio sin previo aviso. IVA no incluido.</p>
+</div>
+{% endblock %}

@@ -1,0 +1,59 @@
+﻿{% extends 'base.html' %}
+
+{% block content %}
+<div class="text-center mb-5 fade-in">
+    <h1 class="section-title display-6 fw-bold">Preguntas Frecuentes</h1>
+    <p class="text-muted">Resuelve tus dudas con respuestas claras pensadas para decisiones empresariales.</p>
+</div>
+
+<div class="accordion fade-in" id="faqAccordion">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="faqHeadingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne" aria-expanded="true" aria-controls="faqCollapseOne">
+                ¿Cómo garantizan la disponibilidad de sus productos?
+            </button>
+        </h2>
+        <div id="faqCollapseOne" class="accordion-collapse collapse show" aria-labelledby="faqHeadingOne" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+                Contamos con un sistema de inventario multi-almacén con niveles de stock mínimo configurados. Nuestro sistema genera alertas automáticas cuando un producto está por agotarse, permitiendo reposición oportuna.
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="faqHeadingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseTwo" aria-expanded="false" aria-controls="faqCollapseTwo">
+                ¿Emiten facturas con desglose de impuestos?
+            </button>
+        </h2>
+        <div id="faqCollapseTwo" class="accordion-collapse collapse" aria-labelledby="faqHeadingTwo" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+                Sí, todas nuestras ventas se registran en el sistema con cálculo automático de subtotales, IVA y totales de factura, cumpliendo con la normativa fiscal venezolana vigente.
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="faqHeadingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseThree" aria-expanded="false" aria-controls="faqCollapseThree">
+                ¿Cuál es su tiempo de entrega?
+            </button>
+        </h2>
+        <div id="faqCollapseThree" class="accordion-collapse collapse" aria-labelledby="faqHeadingThree" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+                Para productos en stock, realizamos entregas en 24-48 horas hábiles en la región central. Para otras zonas del país, el tiempo estimado es de 3-5 días hábiles.
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="faqHeadingFour">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFour" aria-expanded="false" aria-controls="faqCollapseFour">
+                ¿Realizan envíos a todo el país?
+            </button>
+        </h2>
+        <div id="faqCollapseFour" class="accordion-collapse collapse" aria-labelledby="faqHeadingFour" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+                Sí, contamos con aliados logísticos que nos permiten realizar envíos seguros a todas las regiones de Venezuela. Los costos de envío varían según la ubicación y volumen del pedido.
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

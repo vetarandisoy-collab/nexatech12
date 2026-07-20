@@ -1,0 +1,53 @@
+﻿{% extends 'base.html' %}
+
+{% block content %}
+<section class="hero fade-in">
+    <div class="row align-items-center">
+        <div class="col-lg-7">
+            <span class="badge-categoria mb-3">NexaTech</span>
+            <h1 class="display-5 fw-bold">Tecnología y automatización a tu alcance</h1>
+            <p class="lead mt-3">Mejora el control de inventarios, operaciones logísticas y cadena de suministro con una plataforma empresarial enfocada en resultados.</p>
+            <a href="{{ url_for('productos') }}" class="btn btn-primary-custom btn-lg mt-4">Ver catálogo</a>
+        </div>
+        <div class="col-lg-5 mt-5 mt-lg-0">
+            <div class="card card-custom p-4 border-0">
+                <div class="card-body text-center">
+                    <i class="bi bi-laptop fa-3x mb-3 text-white"></i>
+                    <h5 class="card-title text-white">Soluciones inteligentes</h5>
+                    <p class="card-text text-white-75">Una experiencia moderna para tu control de stock y operación empresarial.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="row mt-5 g-4">
+    <div class="col-md-4">
+        <div class="card card-service p-4 h-100 fade-in">
+            <div class="d-flex align-items-center mb-3">
+                <i class="bi bi-wifi fs-2 text-success"></i>
+                <h5 class="ms-3 mb-0">Conectividad estable</h5>
+            </div>
+            <p>Accede a tu inventario y catálogo con una experiencia confiable y ágil.</p>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card card-service p-4 h-100 fade-in">
+            <div class="d-flex align-items-center mb-3">
+                <i class="bi bi-box-seam fs-2 text-success"></i>
+                <h5 class="ms-3 mb-0">Gestión de inventario</h5>
+            </div>
+            <p>Controla stock, alertas y disponibilidad con información centralizada.</p>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card card-service p-4 h-100 fade-in">
+            <div class="d-flex align-items-center mb-3">
+                <i class="bi bi-gear-wide-connected fs-2 text-success"></i>
+                <h5 class="ms-3 mb-0">Automatización</h5>
+            </div>
+            <p>Optimiza procesos operativos con una solución escalable y profesional.</p>
+        </div>
+    </div>
+</section>
+{% endblock %}

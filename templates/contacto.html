@@ -1,0 +1,58 @@
+﻿{% extends 'base.html' %}
+
+{% block content %}
+<div class="row gy-4 fade-in">
+    <div class="col-lg-6">
+        <div class="card card-custom p-4 h-100">
+            <h1 class="fw-bold mb-3">Contacto Empresarial</h1>
+            <p class="text-muted mb-4">Ponte en contacto con nuestro equipo comercial y de soporte para proyectos, compras y servicios empresariales.</p>
+            <div class="mb-4">
+                <p class="mb-2"><strong>Dirección fiscal:</strong></p>
+                <p class="text-muted">Zona Industrial Valencia, Calle 5, Edificio NexaTech, Piso 2. Valencia, Estado Carabobo, Venezuela</p>
+            </div>
+            <div class="mb-4">
+                <p class="mb-2"><strong>Teléfonos:</strong></p>
+                <p class="text-muted">(0241) 555-0100 / (0241) 555-0101</p>
+            </div>
+            <div class="mb-4">
+                <p class="mb-2"><strong>Emails:</strong></p>
+                <p class="text-muted">ventas@nexatech.ve | soporte@nexatech.ve</p>
+            </div>
+            <div class="mb-4">
+                <p class="mb-2"><strong>Horario de atención:</strong></p>
+                <p class="text-muted">Lunes a Viernes de 8:00 AM a 5:00 PM</p>
+            </div>
+            <div>
+                <p class="mb-2"><strong>Ubicación:</strong></p>
+                <p class="text-muted">Ubicados a 5 minutos del Distribuidor San Diego.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="card card-custom p-4 h-100">
+            <h2 class="fw-bold mb-3">Escríbenos</h2>
+            <form method="POST">
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label class="form-label" for="nombre">Nombre completo</label>
+                        <input class="form-control" type="text" id="nombre" name="nombre" placeholder="Ej. Ana Pérez" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label" for="rif">RIF</label>
+                        <input class="form-control" type="text" id="rif" name="rif" placeholder="J-12345678-9">
+                    </div>
+                    <div class="col-12">
+                        <label class="form-label" for="email">Correo electrónico</label>
+                        <input class="form-control" type="email" id="email" name="email" placeholder="correo@ejemplo.com" required>
+                    </div>
+                    <div class="col-12">
+                        <label class="form-label" for="mensaje">Mensaje</label>
+                        <textarea class="form-control" id="mensaje" name="mensaje" rows="5" placeholder="Cuéntanos cómo podemos ayudarte" required></textarea>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary-custom mt-4">Enviar mensaje</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
